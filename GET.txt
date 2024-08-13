@@ -1,0 +1,36 @@
+<html>
+<body bgcolor=green>
+
+<form method="get">
+
+Enter Username:		<input type=textbox  	name="t1">
+Enter Password:		<input type=password  	name="t2">
+
+
+<input type=submit>
+
+</form>
+
+<?php
+
+	if($_SERVER["REQUEST_METHOD"]=="GET")
+	{
+		if (isset($_GET["t1"]) && isset($_GET["t2"]))
+		{
+			$a=$_GET["t1"];
+			$b=$_GET["t2"];
+
+			if($a=="admin" && $b=="password")
+				echo "Login successful Welcome," . "$a";
+			else
+				echo "Login not successful";
+		
+		}
+		
+
+	}
+
+?>
+
+</body>
+</html>
