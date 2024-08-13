@@ -1,0 +1,35 @@
+<?php
+ 
+class student {
+   
+    
+    public $name;
+    public $surname;
+     
+    
+    public function __construct($name, $surname) 
+	{
+        $this->name = $name;
+        $this->surname = $surname;
+    }
+ 
+   
+    public function display() 
+	{
+        echo " My name is " . $this->name 
+              . " Surname is " . $this->surname; 
+    }
+	
+	function __destruct() {
+        echo " This is destructor";
+        echo " Object is destroyed in destructor";
+    }
+}
+     
+
+$user = new student("ABC", "XYZ");
+$user->display();    
+ 
+?>
+
+
