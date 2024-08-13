@@ -1,0 +1,14 @@
+<?php
+
+$num1 = 9;
+$num2 = 4;
+print ("Number 1 original: " . $num1 . "</br>");
+print ("Number 2 original: " . $num2 . "</br>");
+
+$temp_num = $num1;
+$num1 = $num2;
+$num2 = $temp_num;
+
+print ("Number 1 modified: " . $num1 . "</br>");
+print ("Number 2 modified: " . $num2 . "</br>");
+?> 
