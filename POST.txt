@@ -1,0 +1,33 @@
+<html>
+<body bgcolor=green>
+
+<form method="post">
+
+Enter Username:		<input type=texbox  	name="t1">
+Enter Password:		<input type=password  	name="t2">
+
+
+<input type=submit>
+
+</form>
+
+<?php
+
+	if($_SERVER["REQUEST_METHOD"]=="POST")
+	{
+		$a=$_POST['t1'];
+		$b=$_POST['t2'];
+	
+		if($a=="admin" && $b=="password")
+		
+			echo "Login successful Welcome," . "$a";
+		else
+			echo "Login not successful";
+		
+
+	}
+
+?>
+
+</body>
+</html>
